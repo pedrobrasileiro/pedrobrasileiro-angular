@@ -19,7 +19,7 @@ angular.module('pedrobrasileiro.directives').directive('focusMe', function($time
 });
 
 // Utils
-angular.module('pedrobrasileiro.utils').factory('$localStorage', function($window) {
+angular.module('pedrobrasileiro.utils').factory('$localStorage', ['$window', function($window) {
   return {
     set: function(key, value) {
       $window.localStorage[key] = value;
@@ -34,4 +34,4 @@ angular.module('pedrobrasileiro.utils').factory('$localStorage', function($windo
       return $window.localStorage[key]?JSON.parse($window.localStorage[key]):null;
     }
   };
-});
+}]);
