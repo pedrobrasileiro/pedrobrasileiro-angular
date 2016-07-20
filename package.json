@@ -1,0 +1,20 @@
+{
+  "name": "pedrobrasileiro-angular",
+  "version": "1.0.1",
+  "description": "Stuffs Hacks for AngularJS",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "pedrobrasileiro"
+  ],
+  "author": "Pedro Brasileiro",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0"
+  }
+}

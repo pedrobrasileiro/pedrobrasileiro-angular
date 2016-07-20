@@ -1,0 +1,23 @@
+{
+  "name": "pedrobrasileiro-angular",
+  "description": "Stuffs Hacks for AngularJS",
+  "main": "",
+  "authors": [
+    "Pedro Brasileiro"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "pedrobrasileiro"
+  ],
+  "homepage": "http://pedrobrasileiro.com.br",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src"
+  ]
+}
