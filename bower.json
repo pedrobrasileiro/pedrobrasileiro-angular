@@ -1,6 +1,7 @@
 {
   "name": "pedrobrasileiro-angular",
   "description": "Stuffs Hacks for AngularJS",
+  "version": "1.0.2", 
   "main": "",
   "authors": [
     "Pedro Brasileiro"
@@ -16,7 +17,7 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "Gruntfile.js", 
+    "Gruntfile.js",
     "test",
     "tests",
     "src"
