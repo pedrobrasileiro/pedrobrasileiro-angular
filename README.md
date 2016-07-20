@@ -1,6 +1,6 @@
 Utils libs for AngularJS
 
-bower install pedrobrasileiro-angular
+bower install pedrobrasileiro-angular --save
 
 - FocusMe
 autofocus in input when open view
