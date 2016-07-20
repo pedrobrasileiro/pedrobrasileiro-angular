@@ -18,6 +18,38 @@ angular.module('pedrobrasileiro.directives').directive('focusMe', ['$timeout', f
   };
 }]);
 
+angular.module('pedrobrasileiro.directives').directive('ngConfirmClick', [
+  function() {
+    return {
+      priority: 1,
+      link: function(scope, element, attr) {
+        var msg = attr.ngConfirmClick || "Are you sure?";
+        var clickAction = attr.ngClick;
+        attr.ngClick = "";
+        element.bind('click', function(event) {
+          if (window.confirm(msg)) {
+            scope.$eval(clickAction);
+          }
+        });
+      }
+    };
+  }
+]);
+
+angular.module('pedrobrasileiro.directives').directive('ngEnter', [function() {
+  return function(scope, element, attrs) {
+    element.bind("keydown keypress", function(event) {
+      if(event.which === 13) {
+        scope.$apply(function(){
+          scope.$eval(attrs.ngEnter, {'event': event});
+        });
+
+        event.preventDefault();
+      }
+    });
+  };
+}]);
+
 // Utils
 angular.module('pedrobrasileiro.utils').factory('$localStorage', ['$window', function(win) {
   return {
