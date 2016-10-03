@@ -1,8 +1,10 @@
 angular.module('pedrobrasileiro.directives', []);
+angular.module('pedrobrasileiro.filters', []);
 angular.module('pedrobrasileiro.utils', []);
 
 angular.module('pedrobrasileiro', [
   'pedrobrasileiro.directives',
+  'pedrobrasileiro.filters',
   'pedrobrasileiro.utils'
 ]);
 
@@ -49,6 +51,18 @@ angular.module('pedrobrasileiro.directives').directive('ngEnter', [function() {
     });
   };
 }]);
+
+// Filters
+angular.module('pedrobrasileiro.filters').filter('pad', function(){
+  return function(input, len, pad) {
+    input = input.toString();
+    if(input.length >= len) return input;
+    else{
+      pad = (pad || 0).toString();
+      return new Array(1 + len - input.length).join(pad) + input;
+    }
+  };
+});
 
 // Utils
 angular.module('pedrobrasileiro.utils').factory('$localStorage', ['$window', function(win) {
