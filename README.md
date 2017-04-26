@@ -31,3 +31,9 @@ _________
 use LocalStorage in our app
 
 - Import in our project with $localStorage
+
+Utils
+_________
+- Util.validate.CPF(cpf)
+- Util.validate.CNPJ(cnpj)
+- Util.validate.email(email)
